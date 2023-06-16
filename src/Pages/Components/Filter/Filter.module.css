@@ -1,0 +1,15 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.253);
+    position: absolute;
+    right: 4rem;
+}
+
+.types {
+    display: flex;
+    gap: 1rem;
+}
