@@ -1,6 +1,7 @@
 export const data = {
     data: [
         {
+            id:1,
             name: 'Mixmax',
             budget_name: 'Software subscription',
             owner_id: 1,
@@ -18,6 +19,7 @@ export const data = {
             status: 'active'
         },
         {
+            id:2,
             name: 'Quickbooks’',
             budget_name: 'Software subscription',
             owner_id: 2,

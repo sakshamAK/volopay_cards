@@ -1,16 +1,19 @@
+/* eslint-disable react/prop-types */
 import styles from "./Card.module.css"
 
-export const Card = () => {
+// eslint-disable-next-line react/prop-types
+export const Card = ({cardData}) => {
+
     return (
         <div className={styles.card}>
             <div className={styles["card-head"]}>
                 <div className={styles["card-head-text"]}>
-                    <h2>Linkedin</h2>
-                    <div className={styles["card-sub-text"]}><span>Memberfive</span><span className={styles["dot-separator"]}>•</span><span>Budget</span></div>
+                    <h2>{cardData.name}</h2>
+                    <div className={styles["card-sub-text"]}><span>{cardData.budget_name}</span><span className={styles["dot-separator"]}>•</span><span>Budget</span></div>
                 </div>
-                <div className={styles["status-icon"]}>
+                <div className={styles["status-icon"]} style = {cardData.card_type === "burner" ? {backgroundColor:"rgba(255, 166, 0, 0.377)", color: "orangered"} : {backgroundColor: "rgba(255, 0, 0, 0.315)", color: "red"}}>
                     <span className="material-symbols-outlined">
-                        {false ? "local_fire_department" : "sync"}
+                        {cardData.card_type === "burner" ? "local_fire_department" : "sync"}
                     </span>
                 </div>
             </div>
@@ -52,7 +55,7 @@ export const Card = () => {
                         Spent
                     </div>
                 </div>
-                <b>7890 SGD</b>
+                <b>{cardData.spent.value} {cardData.spent.currency}</b>
             </div>
             <div className={styles["progress-bar-labels"]}>
                 <div className={styles["progress-label-head"]}>
@@ -62,7 +65,7 @@ export const Card = () => {
                         Balance
                     </div>
                 </div>
-                <b>7890 SGD</b>
+                <b>{cardData.available_to_spend.value} {cardData.available_to_spend.currency}</b>
             </div>
 
         </div>
