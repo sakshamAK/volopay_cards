@@ -36,10 +36,10 @@ export const Card = ({cardData}) => {
                 </div>
                 <div className={styles["card-details-data"]}>
                     <div className={styles["card-data-head"]}>
-                        Expiry
+                    {cardData.card_type === "burner" ? "Expiry" : "Limit"}
                     </div>
                     <div className={styles["card-data-value"]}>
-                        21 July 2021
+                    {cardData.card_type === "burner" ? cardData.expiry : cardData.limit}
                     </div>
                 </div>
             </div>
