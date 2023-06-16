@@ -1,5 +1,5 @@
 import { data } from "../../../data/data";
-import styles from "./filter.module.css"
+import styles from "./Filter.module.css"
 
 
 // eslint-disable-next-line react/prop-types
