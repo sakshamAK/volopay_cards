@@ -20,3 +20,15 @@
     cursor: pointer;
     border-bottom: 2px solid red;
 }
+
+.cardfilter {
+    margin-left: auto;
+    display: flex;
+    gap: 2rem;
+}
+
+.cardfilter div { 
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
